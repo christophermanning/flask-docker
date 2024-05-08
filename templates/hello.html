@@ -1,0 +1,12 @@
+<!doctype html>
+<a href="/">Home</a>
+{% if name %}
+  <p>Hello, {{ name }}!</p>
+{% else %}
+  <p>Hello, World!</p>
+{% endif %}
+
+<form method="post">
+  <label for="name">Name</label>
+  <input type="text" name="name" value="{{ request.form['name'] }}"></input>
+</form>
